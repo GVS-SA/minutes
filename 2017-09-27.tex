@@ -1,0 +1,97 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+
+
+\begin{document}
+\centering
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+{\LARGE [ Meeting Protokoll Woche 2 ]}\\[0.2\baselineskip] %Title.
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+	\midrule
+	Ort & Raum 5.207 (HSR) \\
+	Datum & 27.09.2017 \\
+	Uhrzeit & 17:15 - 18:00 \\
+	Teilnehmer & 
+	\begin{minipage}[t]{\textwidth}
+	  	\begin{itemize}
+	  		\item Thomas Letsch
+			\item Murièle Trentini
+			\item Michael Wieland
+	  	\end{itemize}
+	\end{minipage}
+	\\
+	\bottomrule
+\end{tabu}
+
+
+\section{Rückblick}
+\begin{enumerate}
+	\item Der erste Sprint wurde erfolgreich abgeschlossen 
+	\item Das Projektteam hat den Abschnitt "Projektmanagement" dokumentiert und die Artefakt-Übersicht wie im ersten Meeting besprochen, überarbeitet.
+	\item Das Projektteam erarbeitete sich eine Überblick über den GVS V1. Aufgrund den Erkenntnissen sollte ein Refactoring der Visualization Komponente möglich sein. 
+	\item Das Projektteam informierte sich über JavaFX und erstellte einen minimalen Prototyp um erste Erfahrungen mit der Technologie zu sammeln
+\end{enumerate}
+
+\section{Aktuelles}
+\begin{enumerate}
+	\item Die Klasse "javafx.embed.swing.SwingNode" könnte während der Entwicklung verwendet werden, um noch nicht migrierte Swing Komponenten trotzdem anzuzeigen.
+\end{enumerate}
+
+\section{Beschlüsse}
+\begin{enumerate}
+	\item %TODO 1. Refactoring, 2. Erweiterungen
+\end{enumerate}
+
+\section{Ausblick}
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+\section{Nächster Termin}
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	Termin & 03.10.2017 \\
+	Bemerkungen & - \\
+	\bottomrule
+\end{tabu}
+
+\end{document}
