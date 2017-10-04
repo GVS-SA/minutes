@@ -65,15 +65,16 @@
 
 \section{Rückblick}
 \begin{enumerate}
-	\item Das Projektteam hat den GVS v1 in das neue GVS UI Projekt migriert. Dabei wurden bereits einige Verbesserungen gemacht, um die Kompatibilität zum Styleguide zu gewährleisten. Zusätzlich wurde die Projektstruktur an die aktuellen Best-Practices angepasst.
-	\item Um den die Code Qualität stets hoch zu halten, wurde ein neuer Build-Prozess mit Continuous integration definiert und umgesetzt. (Gradle Build, FindBugs und Checkstyle Metriken, Travis CI und CodeClimate als Metrik Dashboard)
-	\item Es wurde das Main Frame in dem JavaFX spezifischen FXML definiert.
+	\item Das Projektteam hat den GVS v1 in das neue GVS UI Projekt migriert. Dabei wurden Metriken eingeführt (Checkstyle, Findbugs, Cobertura) damit die Code Qualität des bestehenden Codes verbessert wird. Zusätzlich wurde die Projektstruktur so verändert, dass auch Test geschrieben werden können.
+	\item Der Build-, und Deployment-Prozess wurde komplett überarbeitet (Gradle Build mit FindBugs, Checkstyle, Cobertura, Travis CI, Auto JAR Deploy und Code Climate als Metrik Dashboard)
+	\item Es wurde das Hauptfenster in dem JavaFX spezifischen FXML definiert.
+	\item Bei der Migration ist aufgefallen, dass es einige stylistische Probleme gibt. (Visibility, Magic Numbers, JavaDoc) Es wurden deshalb neue Qualitätsmetriken eingeführt.
+	\item In GVS 1.0 gibt es eine NullPointerException bei der Benutzung des ClusterSplitters.
 \end{enumerate}
 
 \section{Aktuelles}
 \begin{enumerate}
-	\item Bei der Migration ist aufgefallen, dass es einige stylistische Probleme gibt. (Visibility, Magic Numbers, JavaDoc)
-	\item Ebenfalls besteht aus GVS 1.0 eine NullPointerException bei Benutzung des ClusterSplitters.
+	\item Das Laden der FXML Files bietet aktuell einige Herausforderungen. Innerhalb von Eclipse werden die Files geladen, sobald das Projekt jedoch in ein JAR gepackt wird, werden die FXML Files vom ClassPath Loader nicht mehr gefunden.
 \end{enumerate}
 
 \section{Beschlüsse}
@@ -83,7 +84,8 @@
 
 \section{Ausblick}
 \begin{enumerate}
-	\item 
+	\item Bei der Analyse von GVS V1 sollen minimale Sequenzdiagramme für schwierig zu verstehende Abläufe erstellt werden.
+	\item Erstrebenswert ist ein zusätzliches Layering des UI Package in ''Presentation'' und ''Busines Logic''. Da dies jedoch sehr viel Änderungen zur Folge haben kann, wird dies vorerst nur dann gemacht, wenn das Refactoring mit überschaubarem Aufwand möglich ist.
 \end{enumerate}
 
 \section{Nächster Termin}
