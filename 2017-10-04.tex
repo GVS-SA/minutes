@@ -1,0 +1,97 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+
+
+\begin{document}
+\centering
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+{\LARGE [ Meeting Protokoll Woche 3 ]}\\[0.2\baselineskip] %Title.
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+	\midrule
+	Ort & Raum 5.207 (HSR) \\
+	Datum & 04.10.2017 \\
+	Uhrzeit & 17:15 - 18:15 \\
+	Teilnehmer & 
+	\begin{minipage}[t]{\textwidth}
+	  	\begin{itemize}
+	  		\item Thomas Letsch
+			\item Murièle Trentini
+			\item Michael Wieland
+	  	\end{itemize}
+	\end{minipage}
+	\\
+	\bottomrule
+\end{tabu}
+
+
+\section{Rückblick}
+\begin{enumerate}
+	\item Das Projektteam hat den GVS v1 in das neue GVS UI Projekt migriert. Dabei wurden bereits einige Verbesserungen gemacht, um die Kompatibilität zum Styleguide zu gewährleisten. Zusätzlich wurde die Projektstruktur an die aktuellen Best-Practices angepasst.
+	\item Um den die Code Qualität stets hoch zu halten, wurde ein neuer Build-Prozess mit Continuous integration definiert und umgesetzt. (Gradle Build, FindBugs und Checkstyle Metriken, Travis CI und CodeClimate als Metrik Dashboard)
+	\item Es wurde das Main Frame in dem JavaFX spezifischen FXML definiert.
+\end{enumerate}
+
+\section{Aktuelles}
+\begin{enumerate}
+	\item Bei der Migration ist aufgefallen, dass einige stylistische Probleme gibt. (Visibility, Magic Numbers, JavaDoc)
+\end{enumerate}
+
+\section{Beschlüsse}
+\begin{enumerate}
+	\item
+\end{enumerate}
+
+\section{Ausblick}
+\begin{enumerate}
+	\item 
+\end{enumerate}
+
+\section{Nächster Termin}
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	Termin & 11.10.2017 - 17:15 \\
+	Ort & Raum 5.207 (HSR) \\
+	Bemerkungen & - \\
+	\bottomrule
+\end{tabu}
+
+\end{document}
