@@ -65,26 +65,27 @@
 
 \section{Rückblick}
 \begin{enumerate}
-	\item Das Projektteam hat den GVS v1 in das neue GVS UI Projekt migriert. Dabei wurden Metriken eingeführt (Checkstyle, Findbugs, Cobertura) damit die Code Qualität des bestehenden Codes verbessert wird. Zusätzlich wurde die Projektstruktur so verändert, dass auch Test geschrieben werden können.
+	\item Das Projektteam hat den GVS v1 in das neue GVS UI Projekt migriert. Dabei wurden Metriken eingeführt (Checkstyle, Findbugs, Cobertura) damit die Code Qualität des bestehenden Codes verbessert werden kann. Zusätzlich wurde die Projektstruktur so verändert, dass auch Tests geschrieben werden können.
 	\item Der Build-, und Deployment-Prozess wurde komplett überarbeitet (Gradle Build mit FindBugs, Checkstyle, Cobertura, Travis CI, Auto JAR Deploy und Code Climate als Metrik Dashboard)
 	\item Es wurde das Hauptfenster in dem JavaFX spezifischen FXML definiert.
-	\item Bei der Migration ist aufgefallen, dass es einige stylistische Probleme gibt. (Visibility, Magic Numbers, JavaDoc) Es wurden deshalb neue Qualitätsmetriken eingeführt.
-	\item In GVS 1.0 gibt es eine NullPointerException bei der Benutzung des ClusterSplitters.
+	\item Bei der Migration ist aufgefallen, dass es einige stylistische Probleme gibt (Visibility, Magic Numbers, JavaDoc). Es wurden deshalb neue Qualitätsmetriken eingeführt.
+	\item In GVS 1.0 gibt es eine NullPointerException bei der Benutzung des ClusterSplitters. Es wurde ein entsprechendes Bug-Issue erstellt, welches in einer späteren Phase adressiert werden soll.
 	\item Die CORBA Funktionalität wurde so weit wie möglich entfernt. 
 \end{enumerate}
 
 \section{Aktuelles}
 \begin{enumerate}
 	\item Das Laden der FXML Files bietet aktuell einige Herausforderungen. Innerhalb von Eclipse werden die Files geladen, sobald das Projekt jedoch in ein JAR gepackt wird, werden die FXML Files vom ClassPath Loader nicht mehr gefunden.
+	\item Das Problem der Unicode zeichen in den generierten PDFs konnte nicht repliziert werden. Die erstellung eines *.txt Files gelingt mit folgendem online Generator: \url{http://pdftotext.com/de/}
 \end{enumerate}
 
 \section{Beschlüsse}
 \begin{enumerate}
 	\item Wir haben uns für folgendes Projektvorgehen entschieden:
 	\begin{enumerate}
-		\item Analyse: In der Analysephase wird die Problemdomäne spezifiziert. Mehrere Diagramme sollen die Schnittstelle zwischen Business Logik und Presentation wiedergeben. Es soll ersichtlich sein, wie die einzelnen Komponenten miteinander kommunizieren bzw. wie die Daten von der Socket ans UI weiter gereicht werden.
+		\item Analyse: In der Analysephase wird die Problemdomäne spezifiziert. Mehrere Diagramme sollen die Schnittstelle zwischen Business Logik und Presentation aufzeigen. Es soll ersichtlich sein, wie die einzelnen Komponenten miteinander kommunizieren bzw. wie die Daten von der Socket ans UI weiter gereicht werden.
 		\item Entwurf: In der Entwurfsphase soll das Layering eingeführt werden. Ebenfalls soll spezifiziert werden, welche bisherigen Komponenten durch welche neuen Komponenten ersetzt werden. Damit am Ende des Projekts die Zielerreichung überprüft werden kann, sollen die Designentscheide als Requirements niedergeschrieben werden. 
-		\item Umsetzung: Alle Klassen in die entsprechenden Schichten verschieben und Aufrufe entsprechend anpassen. Dabei muss die Funktionalität von GVS V1 beibehalten werden. Kosmetische Änderungen (Force Field Algorithm) werden erst bei ausreichender Zeit durchgeführt.
+		\item Umsetzung: Alle Klassen sollen in ihre entsprechenden Schichten verschoben und Aufrufe entsprechend angepasst werden. Dabei muss die Funktionalität von GVS V1 beibehalten werden. Kosmetische Änderungen (Force Field Algorithm) werden erst bei ausreichender Zeit durchgeführt.
 	\end{enumerate}
 \end{enumerate}
 
