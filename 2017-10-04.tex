@@ -49,7 +49,7 @@
 	\midrule
 	Ort & Raum 5.207 (HSR) \\
 	Datum & 04.10.2017 \\
-	Uhrzeit & 17:15 - 18:15 \\
+	Uhrzeit & 17:10 - 18:00 \\
 	Teilnehmer & 
 	\begin{minipage}[t]{\textwidth}
 	  	\begin{itemize}
@@ -70,6 +70,7 @@
 	\item Es wurde das Hauptfenster in dem JavaFX spezifischen FXML definiert.
 	\item Bei der Migration ist aufgefallen, dass es einige stylistische Probleme gibt. (Visibility, Magic Numbers, JavaDoc) Es wurden deshalb neue Qualitätsmetriken eingeführt.
 	\item In GVS 1.0 gibt es eine NullPointerException bei der Benutzung des ClusterSplitters.
+	\item Die CORBA Funktionalität wurde so weit wie möglich entfernt. 
 \end{enumerate}
 
 \section{Aktuelles}
@@ -79,14 +80,20 @@
 
 \section{Beschlüsse}
 \begin{enumerate}
-	\item
+	\item Wir haben uns für folgendes Projektvorgehen entschieden:
+	\begin{enumerate}
+		\item Analyse: In der Analysephase wird die Problemdomäne spezifiziert. Mehrere Diagramme sollen die Schnittstelle zwischen Business Logik und Presentation wiedergeben. Es soll ersichtlich sein, wie die einzelnen Komponenten miteinander kommunizieren bzw. wie die Daten von der Socket ans UI weiter gereicht werden.
+		\item Entwurf: In der Entwurfsphase soll das Layering eingeführt werden. Ebenfalls soll spezifiziert werden, welche bisherigen Komponenten durch welche neuen Komponenten ersetzt werden. Damit am Ende des Projekts die Zielerreichung überprüft werden kann, sollen die Designentscheide als Requirements niedergeschrieben werden. 
+		\item Umsetzung: Alle Klassen in die entsprechenden Schichten verschieben und Aufrufe entsprechend anpassen. Dabei muss die Funktionalität von GVS V1 beibehalten werden. Kosmetische Änderungen (Force Field Algorithm) werden erst bei ausreichender Zeit durchgeführt.
+	\end{enumerate}
 \end{enumerate}
 
 \section{Ausblick}
 \begin{enumerate}
-	\item Bei der Analyse von GVS V1 sollen minimale Sequenzdiagramme für schwierig zu verstehende Abläufe erstellt werden.
-	\item Erstrebenswert ist ein zusätzliches Layering des UI Package in ''Presentation'' und ''Busines Logic''. Da dies jedoch sehr viel Änderungen zur Folge haben kann, wird dies vorerst nur dann gemacht, wenn das Refactoring mit überschaubarem Aufwand möglich ist.
+	\item Im nächsten Sprint wird mit der Analyse gestartet.
 \end{enumerate}
+
+%TODO PDF to TXT Filter Link adden
 
 \section{Nächster Termin}
 \begin{tabu} to \linewidth {l X }
