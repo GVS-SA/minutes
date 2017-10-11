@@ -1,0 +1,128 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+%links
+\usepackage{hyperref}
+
+
+\begin{document}
+\centering
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+{\LARGE [ Meeting Protokoll Woche 4 ]}\\[0.2\baselineskip] %Title.
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+	\midrule
+	Ort & Raum 5.207 (HSR) \\
+	Datum & 11.10.2017 \\
+	Uhrzeit & 17:15 - 18:15 \\
+	Teilnehmer & 
+	\begin{minipage}[t]{\textwidth}
+	  	\begin{itemize}
+	  		\item Thomas Letsch
+			\item Murièle Trentini
+			\item Michael Wieland
+	  	\end{itemize}
+	\end{minipage}
+	\\
+	\bottomrule
+\end{tabu}
+
+
+\section{Rückblick}
+\begin{enumerate}
+	\item Das Projektteam GVS 1.0 analysiert und dabei folgende Übersichten erstellt:
+	\begin{description}
+		\item[Sequenzdiagramme] Dienen dem Verständnis, wie die eingehenden XML Files in Java Objekte transformiert und angezeigt werden. Sie zeigen alle relevanten beteiligten Klassen.
+		\item[Domainmodell GVS 1.0 ] Enthält die wichtigsten Konzepte aus der alten Applikation.
+		\item[Domainmodell GVS 2.0 ] Enthält die Konzepte, welche in der Vorstellung des Projektteams notwendig sind. Zeigt einen ersten Entwurf einer sauberen Schichtenarchitektur.
+		\item[Migrations-Übersicht GVS 2.0 ] Stellt die Klassen und Packages von GVS 1.0 den Klassen und Packages von GVS 2.0 gegenüber. In der Übersicht ist ersichtlich, welche Klassen mit welchen neuen Klassen ersetzt werden.
+	\end{description}
+	\item Beim Laden einer neuen Session wird in der Klasse ''Persistor'' XML geparst. Eine sehr ähnliche Funktionalität bietet die Klasse ''ModelBuilder''. Das Parsen von XML soll neu einmalig in der Klasse ''XMLParser'' stattfinden. 
+	\item Die Interface Vererbungshierarchie scheint in GVS 1.0 relativ umfänglich zu sein. Viele Hierarchiestufen verkomplizieren das Design. Beispiele: 
+	\begin{enumerate}
+		\item Das Interface ''ISessionController'' unterteilt sich in die beiden Interfaces ''IGraphSessionController'' und ''ITreeSessionController''. Von diesen gibt es dann je eine konkrete Instanz ''GraphSessionController'' rsp. ''TreeSessionController''.
+		\item Das Interface ''IVertex'' unterteilt sich in die beiden Interfaces ''IDefaultVertex'' und ''IIconVertex''. Von diesen gibt es dann je eine konkrete Instanz ''DefaultVertex'' rsp. ''IconVertex''.
+	\end{enumerate}
+	\item Die Begrifflichkeiten bezüglich Session und Model wurden geklärt. Die Namen sollen in GVS 2.0 entweder besser gewählt oder in JavaDoc ausführlicher beschrieben werden.
+	\begin{enumerate}
+		\item GraphModel = Entspricht einer Momentaufnahme des Graphen/Trees.
+		\item Session = Mehrere ''GraphModels'' gehören einer Session an.
+	\end{enumerate}
+\end{enumerate}
+
+\section{Aktuelles}
+\begin{enumerate}
+	\item Die Physik Engine (Force Field Algorithmus) muss noch genauer analysiert werden
+	\item Neu soll im Business Layer eine Style-Klasse für Nodes und Edges erzeugt werden. Diese repräsentiert das Styling im Business Layer, ohne spezifische Imports aus dem eingesetzten UI Framework (Swing rsp. neu JavaFX)
+\end{enumerate}
+
+\section{Beschlüsse}
+\begin{enumerate}
+	\item Korrektur Meeting Protokoll 3, Beschlüsse 1.b: Designentscheide werden nicht in dem Anforderungsdokument sondern in der Designspezifikation niedergeschrieben.
+	\item Das Projektteam muss sich für eine der folgenden Varianten entscheiden
+	\begin{itemize}
+		\item Variante 1: Swing Komponenten durch JavaFX Komponenten ersetzen und dabei so viel wie nur möglich wiederverwenden.
+		\item Variante 2: Sauberes Layering einführen. Dies hat den klaren Vorteil, dass zukünftige Erweiterungen an GVS 2.0 leichter durchgeführt werden können. Es besteht aber die Gefahr, dass dieses ''Extended Refactoring'' den Rahmen der Studienarbeit sprengt.
+	\end{itemize}
+	\item Der beschriebenen Funktionsumfang im Benutzerhandbuch von GVS 1.0 muss beibehalten werden. Anpassungen dürfen nur nach Absprache mit Thomas Letsch durchgeführt werden.
+	\item Folgende Komponenten können in den GVS 2.0 mit tiefer Priorität migriert werden.
+	\begin{itemize}
+		\item Cluster Splitter
+		\item Icon Support auf den Nodes
+		\item Draggable Support für Nodes und Edges
+	\end{itemize}
+	\item Das Projektteam erhält von Herrn Letsch alle Übungsaufgaben aus dem Modul AD2, in welchen GVS 1.0 eingesetzt wird.
+\end{enumerate}
+
+\section{Ausblick}
+\begin{enumerate}
+	\item GVS 1.0 wird in der nächsten Woche noch einmal genau analysiert. Am Ende der Woche soll klar sein, für welche der beschriebenen Varianten man sich entschieden hat.
+	\item Es muss noch einmal genau untersucht werden, ob ein Zusammenzug der Graph und Tree Repräsentation möglich ist. (Falls man sich für Variante 2 entscheidet)
+\end{enumerate}
+
+\section{Nächster Termin}
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	Termin & 18.10.2017 - 17:15 \\
+	Ort & Raum 5.207 (HSR) \\
+	Bemerkungen & - \\
+	\bottomrule
+\end{tabu}
+
+\end{document}
