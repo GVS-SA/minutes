@@ -66,7 +66,7 @@
 
 \section{Rückblick}
 \begin{enumerate}
-	\item Das Projektteam GVS 1.0 analysiert und dabei folgende Übersichten erstellt:
+	\item Das Projektteam hat GVS 1.0 analysiert und dabei folgende Übersichten erstellt:
 	\begin{description}
 		\item[Sequenzdiagramme] Dienen dem Verständnis, wie die eingehenden XML Files in Java Objekte transformiert und angezeigt werden. Sie zeigen alle relevanten beteiligten Klassen.
 		\item[Domainmodell GVS 1.0 ] Enthält die wichtigsten Konzepte aus der alten Applikation.
@@ -74,7 +74,7 @@
 		\item[Migrations-Übersicht GVS 2.0 ] Stellt die Klassen und Packages von GVS 1.0 den Klassen und Packages von GVS 2.0 gegenüber. In der Übersicht ist ersichtlich, welche Klassen mit welchen neuen Klassen ersetzt werden.
 	\end{description}
 	\item Beim Laden einer neuen Session wird in der Klasse ''Persistor'' XML geparst. Eine sehr ähnliche Funktionalität bietet die Klasse ''ModelBuilder''. Das Parsen von XML soll neu einmalig in der Klasse ''XMLParser'' stattfinden. 
-	\item Die Interface Vererbungshierarchie scheint in GVS 1.0 relativ umfänglich zu sein. Viele Hierarchiestufen verkomplizieren das Design. Beispiele: 
+	\item Die Interface Vererbungshierarchie scheint in GVS 1.0 relativ umfangreich zu sein. Viele Hierarchiestufen verkomplizieren das Design. Beispiele: 
 	\begin{enumerate}
 		\item Das Interface ''ISessionController'' unterteilt sich in die beiden Interfaces ''IGraphSessionController'' und ''ITreeSessionController''. Von diesen gibt es dann je eine konkrete Instanz ''GraphSessionController'' rsp. ''TreeSessionController''.
 		\item Das Interface ''IVertex'' unterteilt sich in die beiden Interfaces ''IDefaultVertex'' und ''IIconVertex''. Von diesen gibt es dann je eine konkrete Instanz ''DefaultVertex'' rsp. ''IconVertex''.
@@ -89,12 +89,12 @@
 \section{Aktuelles}
 \begin{enumerate}
 	\item Die Physik Engine (Force Field Algorithmus) muss noch genauer analysiert werden
-	\item Neu soll im Business Layer eine Style-Klasse für Nodes und Edges erzeugt werden. Diese repräsentiert das Styling im Business Layer, ohne spezifische Imports aus dem eingesetzten UI Framework (Swing rsp. neu JavaFX)
+	\item Neu soll im Business Layer eine Style-Klasse (DTO) für Nodes und Edges erzeugt werden. Diese repräsentiert das Styling im Business Layer, ohne spezifische Imports aus dem eingesetzten UI Framework. (Swing rsp. neu JavaFX)
 \end{enumerate}
 
 \section{Beschlüsse}
 \begin{enumerate}
-	\item Korrektur Meeting Protokoll 3, Beschlüsse 1.b: Designentscheide werden nicht in dem Anforderungsdokument sondern in der Designspezifikation niedergeschrieben.
+	\item Korrektur Meeting Protokoll 3, Beschlüsse 1.b: Designentscheide werden nicht im Anforderungsdokument sondern in der Designspezifikation niedergeschrieben. Es wird nur ein Requirement geben. In etwa: ''Swing soll durch JavaFX ersetzt werden unter Beibehaltung des Funktionsumfangs.''
 	\item Das Projektteam muss sich für eine der folgenden Varianten entscheiden
 	\begin{itemize}
 		\item Variante 1: Swing Komponenten durch JavaFX Komponenten ersetzen und dabei so viel wie nur möglich wiederverwenden.
