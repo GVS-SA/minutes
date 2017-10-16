@@ -71,14 +71,20 @@
 
 \section{Aktuelles}
 \begin{enumerate}
-	\item 
+	\item Geplantes Vorgehen:
+	\begin{enumerate}
+		\item Ersetzen von GUI Klassen mit Swing durch GUI Klassen mit JavaFX unter beibehalten des vollen Funktionsumfangs (Draggable-Support, Physics-Engine, ...)
+		\item Refactorings: Besseres, konsequentes Naming. Duplicated Code aufräumen (ModelBuilder $\Leftrightarrow$ Persistor, Tree $\Leftrightarrow$ Graph)
+		\item Allenfalls Erweiterungen von ''Liste Letsch'' einbringen
+		\item Wenn noch Zeit ist: weitergehendes Refactoring mit dem Ziel, Schichten besser voneinander zu trennen.
+	\end{enumerate}
 \end{enumerate}
 
 \section{Beschlüsse}
 %TODO
 \begin{enumerate}
 	\item In der Aufgabenstellung ist eine Erweiterung der Client API um Generics vorgesehen. ????
-	\item Scope: Description für Snapshots von graphen würden auch änderung am Client und Protokoll mit sich ziehen. Allenfalls nur serverseitig anbieten? kann gespeichert aber nicht von cleint aus geschickt werden.
+	\item Scope: Description für Snapshots von graphen würden auch änderung am Client und Protokoll mit sich ziehen. Allenfalls nur serverseitig anbieten? kann gespeichert aber nicht von client aus geschickt werden.
 	\item Sobald wir den Scope fixiert haben. Welche Artefakte müssen nun zwingend abgegeben werden? (z.B Komponentendiagramm)
 \end{enumerate}
 
