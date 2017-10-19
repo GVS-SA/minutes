@@ -66,7 +66,7 @@
 
 \section{Rückblick}
 \begin{enumerate}
-	\item Das Projektteam hat sich nach einer genauen Analyse für die Variante 1 für das weitere Vorgehen entschieden. Das Vorgehen sieht ein vollständiger Austausch des Presentation Layers vor. Der Business Layer wird so weit wie möglich wiederverwendet. Der Entscheid wird dadurch begründet, dass ein erweitertes Refactoring den Rahmen der Studienarbeit wahrscheinlich sprengen würde.  
+	\item Das Projektteam hat sich nach einer genauen Analyse für die Variante 1 für das weitere Vorgehen entschieden. Das Vorgehen sieht ein vollständiger Austausch des Presentation Layers vor. Der Business Layer wird so weit wie möglich wiederverwendet. Der Entscheid wird dadurch begründet, dass ein erweitertes Refactoring den Rahmen der Studienarbeit sprengen würde.  
 \end{enumerate}
 
 \section{Aktuelles}
@@ -74,6 +74,7 @@
 	\item Nach dem Entscheid für Variante 1 ist nun folgendes Vorgehen geplant:
 	\begin{enumerate}
 		\item Ersetzen der Presentation Klassen (Swing) mit JavaFX unter Beibehaltung des vollen Funktionsumfangs (Draggable-Support, Physics-Engine, etc.)
+		\item Library in Java und .NET um Generics erweitern.
 		\item Schichten klar voneinander trennen $\Rightarrow$ Tangles entfernen.
 		\item Refactorings: Besseres, konsequentes Naming. Duplicated Code aufräumen (ModelBuilder $\Leftrightarrow$ Persistor, Tree $\Leftrightarrow$ Graph). Überflüssige Interfaces entfernen. Dieser Schritt wird so weit wie möglich vorzu durchgeführt.
 		\item Zusätzliche Erweiterungen aus der Liste von Herr Letsch umsetzen. Deren Prioritäten werden vor der Umsetzung mit Herr Letsch besprochen.
@@ -84,7 +85,7 @@
 \begin{enumerate}
 	\item Korrektur Meeting Protokoll 4, Beschlüsse 1.a: Es gibt nicht nur ein Requirement. Die drei Requirements sind der Aufgabenstellung zu entnehmen und müssen ausnahmslos umgesetzt werden.
 	\item In der Aufgabenstellung ist eine Erweiterung der Client API um Generics vorgesehen. Diese Anforderungen ist zwingen umzusetzen. Generics müssen im Java, sowie im .NET Client eingeführt werden.
-	\item Das neue Feld ''Snapshot Description'' hätte auch Anpassungen des Übertragungsprotokoll sowie des Client zur Folge. In einem ersten Schritt soll der Support für das neue Feld nur im Server ermöglicht werden. Das Feld kann vorerst nur über das Server UI gesetzt. Im Server soll jedoch vorgesehen werden, dass das Feld zu einem späteren Zeitpunkt auch über das Protokoll übertragen wird.
+	\item Das neue Feld ''Snapshot Description'' hätte auch Anpassungen des Übertragungsprotokoll sowie des Client zur Folge. In einem ersten Schritt soll der Support für das neue Feld nur im Server ermöglicht werden. Das Feld kann vorerst nur über das Server UI gesetzt werden. Im Server soll jedoch vorgesehen werden, dass das Feld zu einem späteren Zeitpunkt auch über das Protokoll übertragen wird.
 \end{enumerate}
 
 \section{Ausblick}
