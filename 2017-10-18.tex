@@ -50,7 +50,7 @@
 	\midrule
 	Ort & Raum 5.207 (HSR) \\
 	Datum & 11.10.2017 \\
-	Uhrzeit & 17:15 - ... \\
+	Uhrzeit & 17:15 - 18:00 \\
 	Teilnehmer & 
 	\begin{minipage}[t]{\textwidth}
 	  	\begin{itemize}
@@ -66,39 +66,41 @@
 
 \section{Rückblick}
 \begin{enumerate}
-	\item 
+	\item Das Projektteam hat sich nach einer genauen Analyse für die Variante 1 für das weitere Vorgehen entschieden. Das Vorgehen sieht ein vollständiger Austausch des Presentation Layers vor. Der Business Layer wird so weit wie möglich wiederverwendet. Der Entscheid wird dadurch begründet, dass ein erweitertes Refactoring den Rahmen der Studienarbeit sprengen würde.  
 \end{enumerate}
 
 \section{Aktuelles}
 \begin{enumerate}
-	\item Geplantes Vorgehen:
+	\item Nach dem Entscheid für Variante 1 ist nun folgendes Vorgehen geplant:
 	\begin{enumerate}
-		\item Ersetzen von GUI Klassen mit Swing durch GUI Klassen mit JavaFX unter beibehalten des vollen Funktionsumfangs (Draggable-Support, Physics-Engine, ...)
-		\item Refactorings: Besseres, konsequentes Naming. Duplicated Code aufräumen (ModelBuilder $\Leftrightarrow$ Persistor, Tree $\Leftrightarrow$ Graph). Überflüssige Interfaces entfernen.
-		\item Allenfalls Erweiterungen von ''Liste Letsch'' einbringen
-		\item Wenn noch Zeit ist: weitergehendes Refactoring mit dem Ziel, Schichten besser voneinander zu trennen.
+		\item Ersetzen der Presentation Klassen (Swing) mit JavaFX unter Beibehaltung des vollen Funktionsumfangs (Draggable-Support, Physics-Engine, etc.)
+		\item Library in Java und .NET um Generics erweitern.
+		\item Schichten klar voneinander trennen $\Rightarrow$ Tangles entfernen.
+		\item Refactorings: Besseres, konsequentes Naming. Duplicated Code aufräumen (ModelBuilder $\Leftrightarrow$ Persistor, Tree $\Leftrightarrow$ Graph). Überflüssige Interfaces entfernen. Dieser Schritt wird so weit wie möglich vorzu durchgeführt.
+		\item Zusätzliche Erweiterungen aus der Liste von Herr Letsch umsetzen. Deren Prioritäten werden vor der Umsetzung mit Herr Letsch besprochen.
 	\end{enumerate}
 \end{enumerate}
 
 \section{Beschlüsse}
-%TODO
 \begin{enumerate}
-	\item In der Aufgabenstellung ist eine Erweiterung der Client API um Generics vorgesehen. ????
-	\item Scope: Description für Snapshots von graphen würden auch änderung am Client und Protokoll mit sich ziehen. Allenfalls nur serverseitig anbieten? kann gespeichert aber nicht von client aus geschickt werden.
-	\item Sobald wir den Scope fixiert haben. Welche Artefakte müssen nun zwingend abgegeben werden? (z.B Komponentendiagramm)
+	\item Korrektur Meeting Protokoll 4, Beschlüsse 1.a: Es gibt nicht nur ein Requirement. Die drei Requirements sind der Aufgabenstellung zu entnehmen und müssen ausnahmslos umgesetzt werden.
+	\item In der Aufgabenstellung ist eine Erweiterung der Client API um Generics vorgesehen. Diese Anforderungen ist zwingen umzusetzen. Generics müssen im Java, sowie im .NET Client eingeführt werden.
+	\item Das neue Feld ''Snapshot Description'' hätte auch Anpassungen des Übertragungsprotokoll sowie des Client zur Folge. In einem ersten Schritt soll der Support für das neue Feld nur im Server ermöglicht werden. Das Feld kann vorerst nur über das Server UI gesetzt werden. Im Server soll jedoch vorgesehen werden, dass das Feld zu einem späteren Zeitpunkt auch über das Protokoll übertragen wird.
 \end{enumerate}
 
 \section{Ausblick}
 \begin{enumerate}
-	\item 
+	\item Das Projektteam dokumentiert die geleistete Arbeit im Abschnitt ''Anforderungsanalyse'' des Technischen Berichts. Die erste Version soll bis spätestens Montag 23.10.17 an den Betreuer zum Review gesendet werden.
+	\item Wurde die Dokumentation entsprechend nachgeführt, fängt das Projektteam mit der Realisierung der Software an.
+	\item Das nächste Meeting wird auf den Dienstag 24.10.17 vor verschoben. Der Raum wird noch bekanntgegeben.
 \end{enumerate}
 
 \section{Nächster Termin}
 \begin{tabu} to \linewidth {l X }
 	\toprule
-	Termin & 25.10.2017 - 17:15 \\
-	Ort & Raum 5.207 (HSR) \\
-	Bemerkungen & - \\
+	Termin & 24.10.2017 - 17:15 \\
+	Ort & - \\
+	Bemerkungen & Ort wird noch bekannt gegeben \\
 	\bottomrule
 \end{tabu}
 
