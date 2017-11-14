@@ -1,0 +1,98 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+
+
+\begin{document}
+\centering
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+{\LARGE [ Meeting Protokoll Woche 9 ]}\\[0.2\baselineskip] %Title.
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+	\midrule
+	Ort & Raum 1.223 \\
+	Datum & 14.11.2017  \\
+	Uhrzeit &  17:15 -   \\
+	Teilnehmer & 
+	\begin{minipage}[t]{\textwidth}
+	  	\begin{itemize}
+			\item Murièle Trentini
+			\item Michael Wieland
+			\item Thomas Letsch
+	  	\end{itemize}
+	\end{minipage}
+	\\
+	\bottomrule
+\end{tabu}
+
+
+\section{Rückblick}
+\begin{enumerate}
+	\item Erste Verbesserungen an der Graph Visualisierung wurden umgesetzt. (Vertex und Edge Styling, Vertex Icon Support, Drag Support verbessert)
+	\item Im Access und Business Layer wurden die nebenläufigen Klassen korrekt synchronisiert
+	\item Die Replay Funktionalität kann nun gestoppt und abgebrochen werden.
+\end{enumerate}
+
+\section{Aktuelles}
+\begin{enumerate}
+	\item Das aktuelle Meeting ist auf den 14.11.2017 vor verschoben (ursprünglich geplant: 15.11.2017).
+	\item Das Projektteam hat die Urheber und Nutzungsbedingungen unterschrieben an Herr Letsch retourniert.
+	\item Die Visualisierung von gerichteten Graphen ist wesentlich komplizierter als erwartet und wird mehr Zeit als geplant in Anspruch nehmen.
+\end{enumerate}
+
+\section{Beschlüsse}
+\begin{enumerate}
+	\item %TODO Unit Tests Umfang
+\end{enumerate} 
+
+\section{Ausblick}
+\begin{enumerate}
+ 	\item 
+\end{enumerate}
+
+\section{Nächster Termin}
+\begin{tabu} to \linewidth {l X }
+	\toprule
+	Termin & 22.11.2017  \\
+	Bemerkungen & Ort wird noch bekanntgegeben   \\
+	\bottomrule
+\end{tabu}
+
+\end{document}
