@@ -1,0 +1,106 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+
+
+\begin{document}
+	\centering
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+	\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+	{\LARGE [ Meeting Protokoll Woche 10 ]}\\[0.2\baselineskip] %Title.
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+	\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+	
+	\begin{tabu} to \linewidth {l X }
+		\toprule
+		\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+		\midrule
+		Ort & Raum 5.207 \\
+		Datum & 22.11.2017  \\
+		Uhrzeit &  17:15 - 18:25 \\
+		Teilnehmer & 
+		\begin{minipage}[t]{\textwidth}
+			\begin{itemize}
+				\item Murièle Trentini
+				\item Michael Wieland
+				\item Thomas Letsch
+			\end{itemize}
+		\end{minipage}
+		\\
+		\bottomrule
+	\end{tabu}
+	
+	
+	\section{Rückblick}
+	\begin{enumerate}
+		\item Der erste Release konnte erfolgreich abgeschlossen werden. Das Projektteam hat den aktuellen Stand released und die Artefakte zusammen mit einer Bugliste an Herr Letsch gesendet.
+		\item Der Tree Layouter wurde komplett überarbeitet (Reingold-Rilford-Algorithmus für n-Trees)
+		\item Der aktuelle Stand der Software wurde umfassend getestet. Die gefunden Fehler wurden entweder behoben oder als Bug Issue im Jira erfasst.
+		\item Das UI Styling wurde umfassend überarbeitet und auf Usability getestet.
+	\end{enumerate}
+	
+	\section{Aktuelles}
+	\begin{enumerate}
+		\item Das Log Level kann auf Package Ebene mittels JMX angepasst werden. Der Vorgang wird in der Benutzeranleitung genauer beschrieben.
+		\item Als Ersatz für den Cluster Splitter wird ein neuer Algorithmus für eine ansprechende Darstellung von B-Trees verwendet.
+	\end{enumerate}
+	
+	\section{Beschlüsse}
+	\begin{enumerate}
+		\item Das Projektteam hat nützliches Feedback zum Release 1.0 von Herr Letsch erhalten.
+		\begin{enumerate}
+			\item Beim Speichern von Sessions muss die *.gvs File Extension sichergestellt werden.
+			\item Der Speed Slider soll während dem Replay disabled werden. 
+			\item Die Graphen sollen zentriert angezeigt werden. Ebenfalls soll der Inhalt stets korrekt skaliert werden.
+		\end{enumerate}
+		\item Eine Sammlung an nützlichen Testprogrammen wird in einem neuen, versionierten Repository angelegt.		
+		\item Das Anlegen des Communication XML File durch den Socket Server ist überflüssig und darf entfernt werden.
+	\end{enumerate} 
+	
+	\section{Ausblick}
+	\begin{enumerate}
+		\item In der nächsten Woche werden die beiden Client Libraries um Generics erweitert.
+		\item Ebenfalls wird der Layout Algorithmus für Binary Trees implementiert.
+	\end{enumerate}
+	
+	\section{Nächster Termin}
+	\begin{tabu} to \linewidth {l X }
+		\toprule
+		Termin & 28.11.2017  \\
+		Bemerkungen & Ort wird noch bekanntgegeben  \\
+		\bottomrule
+	\end{tabu}
+	
+\end{document}
