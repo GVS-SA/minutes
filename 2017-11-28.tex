@@ -70,25 +70,28 @@
 		\item Die Java Lib wurde an die aktuellen Ansprüche angepasst
 		\begin{enumerate}
 			\item Styles wurden an GVS 2.0 UI angepasst
-			\item Überflüssige Felder \textit{Background} und \textit{MaxLabelLength} wurden entfernt
+			\item Felder \textit{Background} und \textit{MaxLabelLength} wurden sind nun fakultativ
 			\item Generics wurden eingeführt
 		\end{enumerate}
+	\item Allgemeine BugFixes (u.a. gemäss Feedback aus Release 1)
 	\end{enumerate}
 	
 	\section{Aktuelles}
-	\begin{enumerate}
-		\item 
-	\end{enumerate}
+	-
 	
 	\section{Beschlüsse}
 	\begin{enumerate}
+		\item Lange Labels müssen für Trees gekürzt werden (''TestLabel12' -> ''Te...12''). Darf dies auch für Graphs geschehen oder erst bei längeren Labels?
 		\item Wie weit soll Einführung der Generics gehen?
 		\item TestFiles für .NET Lib?
+		\item Ist Druck der Arbeit nötig?
 	\end{enumerate} 
 	
 	\section{Ausblick}
 	\begin{enumerate}
-		\item 
+		\item Durchführung von Systemtests (inkl. Testprotokoll, File in gvs-tester erweitern, Bugliste erfassen und beheben)
+		\item Vorbereitung von Release 2: Sync von Code und Klassendiagramm
+		\item Falls Zeit bleibt sollen die Klassen ModelBuilder und Persistor refactored werden -> Ziel ist, kein duplicated Code mehr zu haben.
 	\end{enumerate}
 	
 	\section{Nächster Termin}
