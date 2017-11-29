@@ -65,12 +65,12 @@
 	
 	\section{Rückblick}
 	\begin{enumerate}
-		\item Der TreeLayouter wurde verbessert und macht den Cluster Splitter nun redundant (z.B. werden Links- und Rechtsbäume nun korrekt dargestellt)
+		\item Der TreeLayouter wurde verbessert (z.B. werden Links- und Rechtsbäume nun korrekt dargestellt) und macht den Cluster Splitter nun redundant 
 		\item Für die Java und .NET Libraries wurden die Entwicklungsumgebungen inkl. Git Repository aufgesetzt.
 		\item Die Java- und .NET-Library wurden an die aktuellen Ansprüche angepasst
 		\begin{enumerate}
 			\item Styles wurden an GVS 2.0 UI angepasst
-			\item Felder \textit{Background} und \textit{MaxLabelLength} sind nun fakultativ
+			\item Felder \textit{Background} und \textit{MaxLabelLength} sind nun fakultativ und werden vom GVS 2.0 UI nicht beachtet, falls sie mitgeschickt werden.
 			\item Generics wurden für die Klassenvariablen eingeführt. Auf der Schnittstelle sind keine Generics nötig.
 		\end{enumerate}
 	\item Diverse BugFixes (u.a. gemäss Feedback aus Release 1)
@@ -85,7 +85,7 @@
 	\section{Beschlüsse}
 	\begin{enumerate}
 		\item Die \textit{maxLabelLength} wird von GVS 2.0 nicht mehr unterstützt (optional auf dem Interface). Als Ersatz werden zu lange Labels in der Mitte durch Punkte ersetzt. (''TestLabel12'' $\Rightarrow$ ''Te...12'').
-		\item Generics sind auf dem Interface des Java und .NET Client nicht notwendig.
+		\item Generics sind auf dem Interface des Java und .NET Clients nicht notwendig.
 		\item Die Projektdokumentation muss vom Projektteam nicht ausgedruckt werden und darf digital abgegeben werden.	
 		\item In der Projektdokumentation sollen alle Änderungen zum GVS 1.0 dokumentiert werden. (z.B \textit{maxLabelLength} wurde entfernt)
 		\item Das Projektteam erhält von Herr Letsch allfällige TestFiles für die .NET Library. (falls vorhanden)
