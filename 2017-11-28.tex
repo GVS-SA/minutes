@@ -49,7 +49,7 @@
 		\midrule
 		Ort & Raum 1.223 \\
 		Datum & 28.11.2017  \\
-		Uhrzeit &  17:15 -  \\
+		Uhrzeit &  17:10 - 18:10 \\
 		Teilnehmer & 
 		\begin{minipage}[t]{\textwidth}
 			\begin{itemize}
@@ -65,36 +65,38 @@
 	
 	\section{Rückblick}
 	\begin{enumerate}
-		\item Der TreeLayouter wurde verbessert und genügt nun fast den Ansprüchen des Projektteams. (z.B. werden Links- und Rechtsbäume nun korrekt dargestellt)
-		\item Für die Java und .NET Libraries wurden die Entwicklungsumbgebungen inklusive Git Repository aufgesetzt.
-		\item Die Java Lib wurde an die aktuellen Ansprüche angepasst
+		\item Der TreeLayouter wurde verbessert und macht den Cluster Splitter nun redundant (z.B. werden Links- und Rechtsbäume nun korrekt dargestellt)
+		\item Für die Java und .NET Libraries wurden die Entwicklungsumgebungen inkl. Git Repository aufgesetzt.
+		\item Die Java- und .NET-Library wurden an die aktuellen Ansprüche angepasst
 		\begin{enumerate}
 			\item Styles wurden an GVS 2.0 UI angepasst
-			\item Felder \textit{Background} und \textit{MaxLabelLength} wurden sind nun fakultativ
-			\item Generics wurden eingeführt
+			\item Felder \textit{Background} und \textit{MaxLabelLength} sind nun fakultativ
+			\item Generics wurden für die Klassenvariablen eingeführt. Auf der Schnittstelle sind keine Generics nötig.
 		\end{enumerate}
-	\item Allgemeine BugFixes (u.a. gemäss Feedback aus Release 1)
+	\item Diverse BugFixes (u.a. gemäss Feedback aus Release 1)
 	\end{enumerate}
 	
 	\section{Aktuelles}
 		\begin{enumerate}
-		\item "Komische Lücke" in Tree mit Test File "ClusterSplitterTest" sollte behoben sein.
-		\item Test Files wurden aus dem Java Lib Project entfernt und in ein eigenes Java Projekt verschoben.
+		\item ''Komische Lücke'' in Tree mit Test File "ClusterSplitterTest" ist nun behoben.
+		\item Test Files wurden aus dem Java Lib Project entfernt und in ein eigenständiges Java Projekt verschoben.
 	\end{enumerate} 
 	
 	\section{Beschlüsse}
 	\begin{enumerate}
-		\item Lange Labels müssen für Trees gekürzt werden (''TestLabel12' -> ''Te...12''). Darf dies auch für Graphs geschehen oder erst bei längeren Labels?
-		\item Wie weit soll Einführung der Generics gehen?
-		\item TestFiles für .NET Lib?
-		\item Ist Druck der Arbeit nötig?
+		\item Die \textit{maxLabelLength} wird von GVS 2.0 nicht mehr unterstützt (optional auf dem Interface). Als Ersatz werden zu lange Labels in der Mitte durch Punkte ersetzt. (''TestLabel12'' $\Rightarrow$ ''Te...12'').
+		\item Generics sind auf dem Interface des Java und .NET Client nicht notwendig.
+		\item Die Projektdokumentation muss vom Projektteam nicht ausgedruckt werden und darf digital abgegeben werden.	
+		\item In der Projektdokumentation sollen alle Änderungen zum GVS 1.0 dokumentiert werden. (z.B \textit{maxLabelLength} wurde entfernt)
+		\item Das Projektteam erhält von Herr Letsch allfällige TestFiles für die .NET Library. (falls vorhanden)
+		\item Das Projektteam erhält von Herr Letsch eine aktualisierte Anleitung für die Synchronisation im Enterprise Architect.
 	\end{enumerate} 
 	
 	\section{Ausblick}
 	\begin{enumerate}
-		\item Durchführung von Systemtests (inkl. Testprotokoll, File in gvs-tester erweitern, Bugliste erfassen und beheben)
-		\item Vorbereitung von Release 2: Sync von Code und Klassendiagramm
-		\item Falls Zeit bleibt sollen die Klassen ModelBuilder und Persistor refactored werden -> Ziel ist, kein duplicated Code mehr zu haben.
+		\item Durchführung von Systemtests (inkl. Testprotokoll, ''Integrationstests'' in gvs-tester Repository erweitern, Bugliste erweitern und beheben)
+		\item Vorbereitung von Release 2 am Mittwoch 06.12.2017: Aktualisieren des Enterprise Architect Domainmodell gemäss Anleitung von Herr Letsch.
+		\item Bei vorhandener Zeit sollen die Klassen \textit{ModelBuilder} und \textit{Persistor} zusammengelegt werden. Gemeinsame Funktionalität soll in einer neuen Klasse gekapselt werden. Ziel ist, kein duplicated Code mehr zu haben.
 	\end{enumerate}
 	
 	\section{Nächster Termin}
