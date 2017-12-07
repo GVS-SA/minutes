@@ -49,7 +49,7 @@
 		\midrule
 		Ort & Raum 5.207 \\
 		Datum & 06.12.2017  \\
-		Uhrzeit &  17:10 -  \\
+		Uhrzeit &  17:10 - 17:45 \\
 		Teilnehmer & 
 		\begin{minipage}[t]{\textwidth}
 			\begin{itemize}
@@ -68,7 +68,7 @@
 		\item Die Programmierarbeiten wurden weitgehend abgeschlossen. Ausstehend sind noch kleinere Verbesserungen sowie die Arbeiten an der \textit{ScalableScrollPane} Komponente.
 		\item Das Projektteam hat Release 2 durchgeführt und an Herr Letsch gesendet.
 		\item Das Projektteam hat Systemtests durchgeführt und die gefundenen Fehler als Bug Issue im Jira erfasst.
-		\item Das Projektteam hat das Enterprise Architect Domainmodell mit dem aktuellen Programmcode synchronisisert
+		\item Das Projektteam hat das Enterprise Architect Domainmodell mit dem aktuellen Programmcode synchronisiert.
 	\end{enumerate}
 	
 	\section{Aktuelles}
@@ -78,24 +78,26 @@
 	
 	\section{Beschlüsse}
 	\begin{enumerate}
-		\item Wie sollen wir den .NET Client testen? Müssen Tester geschrieben werden?
-		\item Ist der konfigurierbare Startport nötig. Es wird so oder so hochgezählt?
-		\item Müssen wir im Enterprise Architect zusätzliche Pfeile zeichnen? (z.B SessionFactory, Session -> Wäre für das Verständnis besser)
-		\item Mixed Graph (Relativ und Deafault) Verhalten?
-		\item Empty Graph: Brauchen wir ein Info Message Feature?
+		\item Die .NET Lib muss nicht weiter getestet werden.
+		\item Der Server Startport soll weiter konfigurierbar bleiben.
+		\item Im Enterprise Architect müssen keine zusätzliche Relationen nachgetragen werden. Allenfalls können diese in einem kopierten Modell für den Projektplan eingezeichnet werden.
+		\item Für Mixed Graphen (Relativ und Deafault Vertices) sollen verschiedenen Lösungsansätze getestet und der einfachste umgesetzt werden. Aktuell wird im Server eine Exception geworfen, da das XML Schema solche Graphen nicht erkennt.
+		\item Wenn der Benutzer Trees ohne Root überträgt, wird aktuell nichts angezeigt. Auf eine Meldung kann verzichtet werden, da der Benutzer selber verantwortlich ist, was er an den Server sendet.
 		\item Weitere Arbeiten (wie z.B das Refactoring von ModelBuilder und Persistor) die nicht mehr in den Scope gepasst haben, sollen in der Projektdokumentation beschrieben werden.
+		\item Das Projektteam hat die Nutzungsvereinbarung von Herr Letsch erhalten und wird eine eingescannte Version der Projektdokumentation hinzufügen.
+		\item Die nächsten beiden Meetings werden am Dienstag stattfinden.
 	\end{enumerate}
 
 	\section{Ausblick}
 	\begin{enumerate}
 		\item In der nächsten Woche wird die Projektdokumentation aktualisiert. 
-		\item Ebenfalls werden die noch kleinere Bugs aus den Systemtests behoben.
+		\item Ebenfalls werden noch kleinere Bugs aus den Systemtests behoben.
 	\end{enumerate}
 	
 	\section{Nächster Termin}
 	\begin{tabu} to \linewidth {l X }
 		\toprule
-		Termin & 13.12.2017  \\
+		Termin & 12.12.2017  \\
 		Bemerkungen & Ort wird noch bekannt gegeben  \\
 		\bottomrule
 	\end{tabu}
