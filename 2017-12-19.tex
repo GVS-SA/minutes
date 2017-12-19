@@ -1,0 +1,109 @@
+% !TeX spellcheck = de_CH
+\documentclass[11pt, a4paper,oneside]{scrartcl}
+
+% header
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{\today}
+\ihead{GVS Meeting Protokoll}
+\cfoot{\pagemark}
+
+% language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% tables
+\usepackage{tabu}
+\usepackage{booktabs}
+\tabulinesep=2mm
+
+% images
+\usepackage{graphicx}
+
+% layout
+\usepackage[]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+
+
+\begin{document}
+	\centering
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} %Thick horizontal line.
+	\rule{\textwidth}{0.4pt}\\[\baselineskip] %Thin horizontal line.
+	{\LARGE [ Meeting Protokoll Woche 14 ]}\\[0.2\baselineskip] %Title.
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} %Thin horizontal line.
+	\rule{\textwidth}{1.6pt}\\[2\baselineskip] %Thick horizontal line.
+	
+	\begin{tabu} to \linewidth {l X }
+		\toprule
+		\textbf{Thema} & \textbf{Wöchentliches GVS Meeting} \\
+		\midrule
+		Ort & Raum 1.223 \\
+		Datum & 19.12.2017  \\
+		Uhrzeit &  17:15 - ...  \\
+		Teilnehmer & 
+		\begin{minipage}[t]{\textwidth}
+			\begin{itemize}
+				\item Murièle Trentini
+				\item Michael Wieland
+				\item Thomas Letsch
+			\end{itemize}
+		\end{minipage}
+		\\
+		\bottomrule
+	\end{tabu}
+	
+	
+	\section{Rückblick}
+	\begin{enumerate}
+		\item Das Projektteam hat in den letzten 14 Wochen einen funktionsfähigen Ersatz für den GVS 1.0 entwickelt.
+		\item GVS 2.0 Unterstützt nun auch die Darstellung von n-ary Trees. Das Feature wurde noch in den Umfang aufgenommen, obschon die Darstellung noch nicht fehlerfrei funktioniert. 
+		\item Sämtliche Dokumente für die Projektdokumentation wurden erstellt.
+	\end{enumerate}
+	
+	\section{Aktuelles}
+	\begin{enumerate}
+		\item Abstract und Poster wurde zum Review übergeben
+	\end{enumerate} 
+	
+	\section{Beschlüsse}
+	\begin{enumerate}
+		\item Müssen die Zeitauswertung Rohdaten abgeliefert werden
+		\item Feedback Abstract
+		\item Folgende Dokumente auf der DVD enthalten sein
+		\begin{enumerate}
+			\item Sourcecode UI
+			\item Sourcecode Lib (Java und C\#)
+			\item Sourcecode Testers
+			\item Enterprise Architect Project (inkl. aktuelles Klassendiagramm)
+			\item Benutzerhandbuch (separat)
+			\item Projektdokumentation mit Anhängen (Abstract, Management Summary, Anforderungsspezifikation, Architektur und Designspezifikation, Umsetzung, Ergebnisdiskussion, Projektplanung, Meetingprotokolle, Zeitauswertung, Testprotokoll, Persönliche Berichte, Eigenständigkeitserklärung)
+			\item Poster (A0)
+		\end{enumerate}
+	\end{enumerate}
+	
+	\section{Ausblick}
+	\begin{enumerate}
+		\item EPrint Variante erstellen
+		\item DVD Brennen
+		\item Die Arbeit wird in der Bachelorarbeit weitergeführt.
+	\end{enumerate}
+	
+	\section{Nächster Termin}
+	\begin{tabu} to \linewidth {l X }
+		\toprule
+		Termin & -  \\
+		Bemerkungen &  \\
+		\bottomrule
+	\end{tabu}
+	
+\end{document}
